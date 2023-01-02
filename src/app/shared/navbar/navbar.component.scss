@@ -1,6 +1,5 @@
 ul {
     display: flex;
-    position: sticky;
 }
 
 .header{
@@ -27,13 +26,18 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: black;
+    font-size: x-large;
+}
+
+nav ul li a:hover{
+    transition: all .2s ease-in;
+    color: #D96122;
 }
 
 nav ul li select {
     border: none;
     font-size: 18px;
     font-family: sans-serif;
-
 }
 
 ul .btnget {

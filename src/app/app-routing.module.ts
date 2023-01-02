@@ -1,11 +1,45 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AboutusComponent } from './Feature/aboutus/aboutus.component';
+import { BlogsComponent } from './Feature/blogs/blogs.component';
+import { HomeComponent } from './Feature/home/home.component';
+import { OurservicesComponent } from './Feature/ourservices/ourservices.component';
+import { OurtechnologiesComponent } from './Feature/ourtechnologies/ourtechnologies.component';
+import { TagloneExpcardComponent } from './Feature/taglone-expcard/taglone-expcard.component';
 
 const routes: Routes = [
   {
-    path: 'navbar',
-    component: NavbarComponent
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'services',
+    component: OurservicesComponent
+  },
+  {
+    path: 'ourtechnogies',
+    component: OurtechnologiesComponent
+  },
+  {
+    path: 'ourbest',
+    component: TagloneExpcardComponent
+  },
+  {
+    path: 'ourblog',
+    component: BlogsComponent
+  },
+  {
+    path: 'about',
+    component: AboutusComponent
+  },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('src/app/Feature/admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
