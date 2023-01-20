@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { TagloneExpcardComponent } from './Feature/taglone-expcard/taglone-expcard.component';
 import { BlogsComponent } from './Feature/blogs/blogs.component';
 import { OurtechnologiesComponent } from './Feature/ourtechnologies/ourtechnologies.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { OurtechnologiesComponent } from './Feature/ourtechnologies/ourtechnolog
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     SharedModule

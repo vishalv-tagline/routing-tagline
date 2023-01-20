@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { City } from 'src/app/common';
 import { CommonService } from 'src/app/Services/common.service';
 
 @Component({
@@ -10,10 +11,8 @@ import { CommonService } from 'src/app/Services/common.service';
 export class AdminChild2Component implements OnInit {
 
   citieDetails: any;
-  citieId!: number
-  constructor(private activeRouter: ActivatedRoute, private commonService: CommonService) {
-
-  }
+  citieId!: number;
+  constructor(private activeRouter: ActivatedRoute, private commonService: CommonService) { }
 
   ngOnInit(): void {
     this.activeRouter.params.subscribe((response: any) => {

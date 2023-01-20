@@ -60,3 +60,9 @@ export interface Languages {
     image: string,
     title: string
 }
+
+export interface City {
+    id: number,
+    name?: string,
+    population?: number
+}

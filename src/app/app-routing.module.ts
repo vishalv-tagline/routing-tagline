@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './Feature/aboutus/aboutus.component';
+import { RegistraionComponent } from './Feature/admin/registraion/registraion.component';
 import { BlogsComponent } from './Feature/blogs/blogs.component';
 import { HomeComponent } from './Feature/home/home.component';
 import { OurservicesComponent } from './Feature/ourservices/ourservices.component';

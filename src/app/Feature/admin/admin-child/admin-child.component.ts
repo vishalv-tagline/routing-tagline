@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { City, CommonService } from 'src/app/Services/common.service';
+import { City } from 'src/app/common';
+import { CommonService } from 'src/app/Services/common.service';
 
 @Component({
   selector: 'app-admin-child',
@@ -9,18 +10,18 @@ import { City, CommonService } from 'src/app/Services/common.service';
 })
 export class AdminChildComponent implements OnInit {
 
-  citiesData: any;
+  citiesData!: City[];
   constructor(private router: Router, private commonService: CommonService) { }
 
   ngOnInit(): void {
     this.citiesData = this.commonService.cities
   }
 
-  visiteCitie(citieId: number) {
-    if (citieId) {
-      this.router.navigateByUrl(`admin/admin-child2/${citieId}`);
+  cityDetails(cityId: number) {
+    if (cityId) {
+      this.router.navigate([`admin/citiesList/${cityId}`])
     }
-    console.log('citieId :>> ', citieId);
+    console.log('cityId :>> ', cityId);
   }
 
 }
